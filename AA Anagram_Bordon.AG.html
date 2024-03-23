@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		</style>
+	</head>
+	<body>
+		<script>
+		
+			var firstInput = prompt("Please enter first word or phrase.");
+			var secondInput = prompt("Please enter second word or phrase.");
+			
+			function anagram(input1,input2){
+				let first = input1.replace(/[^a-z]/g, '').trim().toLowerCase();
+				let second = input2.replace(/[^a-z]/g, '').trim().toLowerCase();	
+				
+				first = first.split("").sort().join("");
+				second = second.split("").sort().join("");
+				
+				return first === second;			
+			}
+			
+			let result = anagram(firstInput, secondInput);
+				
+			if (result === true) {
+				alert("The two word/s and/or phrase/s are anagrams");
+			} else {
+				alert("The two word/s and/or phrase/s are not anagrams");
+				}
+						
+		</script>
+	</body>
+</html>
