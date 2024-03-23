@@ -11,8 +11,8 @@
 			var secondInput = prompt("Please enter second word or phrase.");
 			
 			function anagram(input1,input2){
-				let first = input1.replace(/[^a-z]/g, '').trim().toLowerCase();
-				let second = input2.replace(/[^a-z]/g, '').trim().toLowerCase();	
+				let first = input1.toLowerCase().replace(/[^a-z]/g, '').trim();
+				let second = input2.toLowerCase().replace(/[^a-z]/g, '').trim();	
 				
 				first = first.split("").sort().join("");
 				second = second.split("").sort().join("");
